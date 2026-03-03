@@ -1,0 +1,75 @@
+media:
+  input: public/uploads
+  output: /uploads
+
+content:
+  - name: home
+    label: Domovská stránka
+    type: file
+    path: content/pages/home.md
+    fields:
+      - name: title
+        label: Titulek
+        type: string
+        required: true
+      - name: lead
+        label: Úvodní text
+        type: text
+      - name: heroImage
+        label: Hero fotografie
+        type: image
+      - name: cta
+        label: CTA
+        type: object
+        fields:
+          - name: label
+            label: Text tlačítka
+            type: string
+          - name: link
+            label: Odkaz
+            type: string
+      - name: sections
+        label: Sekce
+        type: object
+        list: true
+        fields:
+          - name: heading
+            label: Nadpis
+            type: string
+          - name: body
+            label: Text
+            type: text
+  - name: news
+    label: Aktuality
+    type: collection
+    path: content/news
+    filename: "{year}-{month}-{day}-{slug}.md"
+    fields:
+      - name: title
+        label: Titulek
+        type: string
+        required: true
+      - name: date
+        label: Datum
+        type: date
+        required: true
+      - name: summary
+        label: Perex
+        type: text
+      - name: coverImage
+        label: Obrázek
+        type: image
+      - name: tags
+        label: Štítky
+        type: string
+        list: true
+      - name: body
+        label: Obsah
+        type: text
+        required: true
+    view:
+      fields: [title, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
