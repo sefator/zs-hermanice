@@ -194,28 +194,3 @@ Není-li žadateli na ústně podanou žádost informace poskytnuta anebo nepova
 - proti rozhodnutí odvolacího orgánu se již nelze odvolat. Lze však podat návrh na přezkoumání takového rozhodnutí u příslušného soudu.
 
 **Pozn.** Pro podání opravného prostředku není vytvořen žádný formulář. Opravný prostředek lze buď podat písemně nebo ústně do protokolu. Z podání musí být zřejmé, kdo jej činí a proti jakému rozhodnutí je podání učiněno.
-
-### Kontakt
-
-- [Na školu](/kontakt/na-skolu/ "Na školu")
-- [Pedagogický tým](/kontakt/pedagogicky-tym-2/ "kontakty na pedagogy")
-- [E-podatelna](/kontakt/e-podatelna/ "E-podatelna")
-- [Povinné informace](/kontakt/povinne-informace/ "Povinné informace")
-
-## Fotogalerie
-
-### Náhodná fotogalerie
-
-[![2008/2009](https://www.zshermaniceuoder.cz/evt_image.php?img=1327&width=500)](/fotogalerie-1/2008-2009-129cs.html)
-
-[Logo - Galileo Corporation](//www.igalileo.cz)
-
-Oficiální stránky ZŠ Heřmanice u Oder © 2026
-
-Provozovatel [Galileo Corporation s.r.o.](//www.igalileo.cz)
-
-Poslední aktualizace: 24. 2. 2026
-
-[Změna vzhledu](/?zmena-vzhledu=1&lang=cs), [Struktura stránek](/?mapa-webu=1&lang=cs "Struktura stránek"), [Vytisknout](# "Vytisknout")
-
-[](/cs/tiraz/#certifikacepristupnosti)[Prohlášení o přístupnosti](/cs/tiraz/#prohlaseniopristupnosti)
