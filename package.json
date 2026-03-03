@@ -9,7 +9,10 @@
     "lint": "next lint",
     "sst:dev": "sst dev",
     "sst:deploy": "sst deploy --stage prod",
-    "sst:remove": "sst remove"
+    "sst:remove": "sst remove",
+    "test:accessibility": "start-server-and-test start http://localhost:3000 pa11y-ci",
+    "test:axe": "start-server-and-test start http://localhost:3000 'axe http://localhost:3000 --exit'",
+    "test:lighthouse": "lhci autorun"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
@@ -21,6 +24,8 @@
     "sst": "^4.1.5"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.10.0",
+    "@lhci/cli": "^0.14.0",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -28,7 +33,9 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",
     "eslint-config-next": "16.1.6",
+    "pa11y-ci": "^3.1.0",
     "postcss": "^8.4.47",
+    "start-server-and-test": "^2.0.8",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.2"
   }

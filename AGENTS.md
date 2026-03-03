@@ -10,13 +10,16 @@
 - **npm run build** – produce a production-ready `.next` build (needed before `npm start` or deploying). Validates static props, routes, and static export readiness.
 - **npm run start** – run the production server from the last build. Only call after a successful `npm run build`.
 - **npm run lint** – run `next lint`. Covers React/TypeScript rules via `eslint-config-next`; this is the main automated quality gate.
+- **npm run test:accessibility** – run Pa11y CI accessibility audits against configured URLs (requires server running).
+- **npm run test:axe** – run axe-core CLI accessibility scan against localhost:3000 (requires server running).
+- **npm run test:lighthouse** – run Lighthouse CI accessibility audit (starts server automatically per lighthouserc.json).
 - **npm run sst:dev** – bring up SST local services (stack defined in `sst.config.ts`). Useful for testing backend infra locally.
 - **npm run sst:deploy --stage prod** – deploy the full SST stack to production. Always inspect logs before and after; the stack might rely on sensitive resources.
 - **npm run sst:remove** – tear down the deployed SST stack. Use with caution to avoid deleting shared infrastructure inadvertently.
 
 ### Running a Single Test
-- There are no automated tests committed yet. When you add tests (e.g., with `vitest`, `jest`, or Playwright), define a `test` script in `package.json`.
-- For future coverage, a single test run will look like `npm run test -- path/to/file.test.ts` once the `test` script is wired up.
+- Accessibility tests are available via Pa11y CI, axe-core, and Lighthouse CI. Run `npm run test:accessibility`, `npm run test:axe`, or `npm run test:lighthouse` to audit specific aspects.
+- For future unit/integration tests (e.g., with `vitest`, `jest`, or Playwright), define a `test` script in `package.json`.
 - For targeted linting, you can scope ESLint by running `npx eslint path/to/file.tsx` (the same rule set as `npm run lint`).
 - If you introduce Playwright or Cypress suites, document their “single spec” command here as `npx playwright test ./tests/foo.spec.ts`.
 
@@ -83,5 +86,6 @@
 ## 6. Agent Workflow Guidelines
 
 - Before touching code, run `npm install` if needed, then `npm run lint` to understand baseline failures.
+- When you modify UI components or pages, run `npm run test:accessibility` locally to check for accessibility regressions; no automated preview server exists beyond `next dev`.
 - When you modify markdown or data helpers, re-run `npm run dev` to preview the Next.js pages; no automated preview server exists beyond `next dev`.
 - Keep this AGENTS file updated with new commands, style changes, or infrastructure notes. Agents rely on its accuracy as their operational manual.
