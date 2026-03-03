@@ -17,6 +17,7 @@
 /.next/
 /out/
 .sst/
+.open-next/
 
 # production
 /build
