@@ -35,13 +35,17 @@ jobs:
 
       - name: Run accessibility tests
         id: pa11y_axe
-        run: npx start-server-and-test start http://localhost:3000 'pa11y-ci && axe http://localhost:3000 --exit'
+        run: npx start-server-and-test start http://localhost:3000 'pa11y-ci && axe http://localhost:3000 --exit --no-sandbox'
         continue-on-error: true
+        env:
+          PUPPETEER_ARGS: --no-sandbox
 
       - name: Run Lighthouse accessibility audit
         id: lighthouse
-        run: npx start-server-and-test start http://localhost:3000 lhci autorun
+        run: npx start-server-and-test start http://localhost:3000 'npm run test:lighthouse'
         continue-on-error: true
+        env:
+          PUPPETEER_ARGS: --no-sandbox
 
       - name: Warn if Pa11y/Axe failed
         if: steps.pa11y_axe.outcome == 'failure'
