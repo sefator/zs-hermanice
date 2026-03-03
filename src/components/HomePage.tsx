@@ -46,7 +46,7 @@ export function HomePage({ hero, news }: HomePageProps) {
             {hero.cta && (
               <Link
                 href={hero.cta.link}
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-clay-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-clay-500/30 transition hover:-translate-y-0.5"
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-black/30 transition hover:-translate-y-0.5"
               >
                 {hero.cta.label}
               </Link>
@@ -67,13 +67,13 @@ export function HomePage({ hero, news }: HomePageProps) {
         </header>
 
         {hero.galleryTeasers && (
-          <section className="space-y-6">
+          <section aria-labelledby="gallery-heading" className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-clay-500">
                   Fotogalerie
                 </p>
-                <h2 className="text-3xl font-semibold">Školní život v obrazech</h2>
+                <h2 id="gallery-heading" className="text-3xl font-semibold">Školní život v obrazech</h2>
               </div>
             </div>
             <div className="grid gap-5 md:grid-cols-5">
@@ -108,12 +108,12 @@ export function HomePage({ hero, news }: HomePageProps) {
         )}
 
         {hero.projects && (
-          <section className="space-y-6">
+          <section aria-labelledby="projects-heading" className="space-y-6">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-clay-500">
                 Školní projekty
               </p>
-              <h2 className="text-3xl font-semibold">Naše hodnoty a aktivity</h2>
+              <h2 id="projects-heading" className="text-3xl font-semibold">Naše hodnoty a aktivity</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {hero.projects.map((project) => (
@@ -141,12 +141,12 @@ export function HomePage({ hero, news }: HomePageProps) {
         )}
 
         {hero.testimonials && (
-          <section className="space-y-6">
+          <section aria-labelledby="testimonials-heading" className="space-y-6">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-clay-500">
                 Reference
               </p>
-              <h2 className="text-3xl font-semibold">Co říkají rodiče</h2>
+              <h2 id="testimonials-heading" className="text-3xl font-semibold">Co říkají rodiče</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               {hero.testimonials.map((testimonial) => (
@@ -179,9 +179,9 @@ export function HomePage({ hero, news }: HomePageProps) {
         )}
 
         {hero.schoolImages && (
-          <section className="space-y-6">
+          <section aria-labelledby="school-images-heading" className="space-y-6">
             <div>
-              <h2 className="text-3xl font-semibold">Škola v obrazech</h2>
+              <h2 id="school-images-heading" className="text-3xl font-semibold">Škola v obrazech</h2>
             </div>
             <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-7">
               {hero.schoolImages.map((img, index) => (
@@ -203,13 +203,13 @@ export function HomePage({ hero, news }: HomePageProps) {
         )}
 
         {hero.recentNews && (
-          <section className="space-y-6">
+          <section aria-labelledby="recent-news-heading" className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-clay-500">
                   Aktuality
                 </p>
-                <h2 className="text-3xl font-semibold">Život ve škole</h2>
+                <h2 id="recent-news-heading" className="text-3xl font-semibold">Život ve škole</h2>
               </div>
               <Link
                 href="/aktuality"
@@ -250,9 +250,9 @@ export function HomePage({ hero, news }: HomePageProps) {
         )}
 
         {hero.sponsors && (
-          <section className="space-y-6">
+          <section aria-labelledby="sponsors-heading" className="space-y-6">
             <div>
-              <h2 className="text-3xl font-semibold">Naši sponzoři</h2>
+              <h2 id="sponsors-heading" className="text-3xl font-semibold">Naši sponzoři</h2>
             </div>
             <div className="flex flex-wrap items-center gap-8">
               {hero.sponsors.map((sponsor) => (
@@ -268,7 +268,7 @@ export function HomePage({ hero, news }: HomePageProps) {
                   )}
                   <p className="text-sm font-semibold text-clay-500">
                     {sponsor.link ? (
-                      <Link href={sponsor.link} className="hover:underline">
+                      <Link href={sponsor.link} className="text-clay-500 hover:underline">
                         {sponsor.name}
                       </Link>
                     ) : (

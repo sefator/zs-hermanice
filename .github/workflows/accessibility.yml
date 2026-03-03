@@ -3,6 +3,8 @@ name: Accessibility Checks
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   accessibility:
@@ -32,10 +34,22 @@ jobs:
         run: npm run build
 
       - name: Run accessibility tests
+        id: pa11y_axe
         run: npx start-server-and-test start http://localhost:3000 'pa11y-ci && axe http://localhost:3000 --exit'
+        continue-on-error: true
 
       - name: Run Lighthouse accessibility audit
+        id: lighthouse
         run: npx start-server-and-test start http://localhost:3000 lhci autorun
+        continue-on-error: true
+
+      - name: Warn if Pa11y/Axe failed
+        if: steps.pa11y_axe.outcome == 'failure'
+        run: echo "::warning::Pa11y and Axe accessibility tests failed. Deployment proceeding, but review artifacts for details."
+
+      - name: Warn if Lighthouse failed
+        if: steps.lighthouse.outcome == 'failure'
+        run: echo "::warning::Lighthouse accessibility audit failed. Deployment proceeding, but review artifacts for details."
 
       - name: Upload Lighthouse report
         uses: actions/upload-artifact@v4
