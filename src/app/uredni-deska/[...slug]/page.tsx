@@ -16,7 +16,7 @@ export default async function OfficialPage({ params }: { params: Params }) {
       <div className="mx-auto max-w-4xl px-6 py-16">
         <Link
           href="/"
-          className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-clay-500 hover:underline"
+          className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline"
         >
           ← Zpět na hlavní stránku
         </Link>
@@ -37,7 +37,7 @@ export default async function OfficialPage({ params }: { params: Params }) {
                   <li key={index}>
                     <Link
                       href={download.url}
-                      className="inline-flex items-center gap-2 text-clay-500 hover:underline"
+                      className="inline-flex items-center gap-2 text-black hover:underline"
                     >
                       📄 {download.label}
                     </Link>

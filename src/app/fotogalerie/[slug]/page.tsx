@@ -16,7 +16,7 @@ export default async function GalleryPage({ params }: { params: Params }) {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <Link
           href="/"
-          className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-clay-500 hover:underline"
+          className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline"
         >
           ← Zpět na hlavní stránku
         </Link>
