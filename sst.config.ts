@@ -23,7 +23,7 @@ export default $config({
       path: ".",
       domain: {
         name: domainName,
-        dns: sst.aws.dns({ zone: "sftr.cz" }),
+        dns: sst.aws.dns(),
       },
       environment: {
         NEXT_PUBLIC_SITE_URL: `https://${domainName}`,

@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "sst:dev": "sst dev",
-    "sst:deploy": "sst deploy --stage=prod",
+    "sst:deploy": "sst deploy --stage prod",
     "sst:remove": "sst remove"
   },
   "dependencies": {
