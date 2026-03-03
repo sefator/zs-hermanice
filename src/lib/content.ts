@@ -14,23 +14,39 @@ export async function getHomeContent(): Promise<HeroContent> {
 
 export async function getNewsItems(limit?: number): Promise<NewsItem[]> {
   const newsDir = path.join(contentDir, "news");
-  const entries = await fs.readdir(newsDir);
+  const files = await fs.readdir(newsDir);
+  const newsItems: NewsItem[] = [];
 
-  const items = await Promise.all(
-    entries.map(async (filename) => {
-      const raw = await fs.readFile(path.join(newsDir, filename), "utf8");
+  for (const file of files) {
+    if (file.endsWith('.md')) {
+      const filePath = path.join(newsDir, file);
+      const raw = await fs.readFile(filePath, "utf8");
       const parsed = matter(raw);
-      const slug = filename.replace(/\.(md|mdx|yml|yaml|txt)$/i, "");
-      return {
-        ...(parsed.data as Omit<NewsItem, "slug">),
+      const slug = path.basename(file, '.md');
+      newsItems.push({
+        ...parsed.data as Omit<NewsItem, 'slug'>,
         slug,
-      } satisfies NewsItem;
-    })
-  );
+        body: parsed.content,
+      });
+    }
+  }
 
-  const sorted = items.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  const sorted = newsItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return limit ? sorted.slice(0, limit) : sorted;
+}
 
-  return typeof limit === "number" ? sorted.slice(0, limit) : sorted;
+export async function getPageContent(slug: string): Promise<{ title: string; content: string; data: any }> {
+  const pagesDir = path.join(contentDir, "pages");
+  const file = path.join(pagesDir, `${slug}.md`);
+  try {
+    const raw = await fs.readFile(file, "utf8");
+    const parsed = matter(raw);
+    return {
+      title: parsed.data.title || slug,
+      content: parsed.content,
+      data: parsed.data,
+    };
+  } catch {
+    throw new Error(`Page not found: ${slug}`);
+  }
 }

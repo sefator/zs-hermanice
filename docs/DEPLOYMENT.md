@@ -4,6 +4,7 @@
    - checks out the repo and installs dependencies (`npm ci`)
    - configures AWS credentials via `aws-actions/configure-aws-credentials`
    - runs `npm run sst:deploy --stage prod` (SST already builds both infra and the Next.js app)
+   - uses concurrency controls to ensure only one deployment runs at a time (cancels in-progress runs on new pushes)
 
 2. Add the following secrets under GitHub **Settings → Secrets → Actions** for this repository:
    - `AWS_ACCESS_KEY_ID`

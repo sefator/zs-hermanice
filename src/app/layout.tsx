@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Nav } from "@/components/Nav";
 
 export const metadata: Metadata = {
   title: "ZŠ Heřmanice",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs">
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }

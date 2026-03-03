@@ -1,26 +1,37 @@
+import Link from "next/link";
 import { getNewsItems } from "@/lib/content";
 
-export default async function NewsPage() {
-  const items = await getNewsItems();
+export default async function AktualitaPage() {
+  const news = await getNewsItems();
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-16">
-      <h1 className="text-4xl font-semibold text-[#1e1b16]">Aktuality</h1>
-      <div className="mt-10 space-y-8">
-        {items.map((item) => (
+    <div className="mx-auto max-w-5xl px-6 py-16">
+      <h1 className="mb-8 text-3xl font-semibold">Aktuality</h1>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {news.map((item) => (
           <article
             key={item.slug}
-            className="rounded-2xl border border-white/60 bg-white/90 p-6 shadow-sm"
+            className="flex h-full flex-col rounded-2xl border border-white/70 bg-white/80 p-5 shadow-sm"
           >
-            <p className="text-xs uppercase tracking-[0.3em] text-[#c26a32]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-clay-500">
               {new Date(item.date).toLocaleDateString("cs-CZ", {
                 day: "2-digit",
                 month: "2-digit",
                 year: "numeric",
               })}
             </p>
-            <h2 className="mt-2 text-2xl font-semibold">{item.title}</h2>
-            <p className="mt-3 text-[#4c443a]">{item.summary}</p>
+            <h2 className="mt-2 text-lg font-semibold text-[#1e1b16]">
+              {item.title}
+            </h2>
+            <p className="mt-2 text-sm text-[#4c443a]">{item.summary}</p>
+            <div className="mt-auto">
+              <Link
+                href={`/aktuality/${item.slug}`}
+                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-clay-500"
+              >
+                Číst více →
+              </Link>
+            </div>
           </article>
         ))}
       </div>
