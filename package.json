@@ -10,6 +10,7 @@
     "sst:dev": "sst dev",
     "sst:deploy": "sst deploy --stage prod",
     "sst:remove": "sst remove",
+    "test": "vitest",
     "test:accessibility": "start-server-and-test start http://localhost:3000 pa11y-ci",
     "test:axe": "start-server-and-test start http://localhost:3000 'axe http://localhost:3000 --exit'",
     "test:lighthouse": "lhci autorun"
@@ -30,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/ui": "^1.6.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",
     "eslint-config-next": "16.1.6",
@@ -37,6 +39,7 @@
     "postcss": "^8.4.47",
     "start-server-and-test": "^2.0.8",
     "tailwindcss": "^3.4.15",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "vitest": "^1.6.0"
   }
 }
