@@ -54,6 +54,10 @@ export default async function DruzinaPage({ params }: { params: Params }) {
 }
 
 export async function generateStaticParams() {
-  const slugs = ["druzina", "krouzky"];
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const contentDir = path.join(process.cwd(), "content", "pages", "druzina");
+  const files = await fs.readdir(contentDir);
+  const slugs = files.filter(f => f.endsWith('.md')).map(f => path.basename(f, '.md'));
   return slugs.map((slug) => ({ slug }));
 }

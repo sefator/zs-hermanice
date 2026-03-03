@@ -53,6 +53,10 @@ export default async function GalleryPage({ params }: { params: Params }) {
 }
 
 export async function generateStaticParams() {
-  const slugs = ["2025-2026", "2024-2025", "2023-2024", "2022-2023", "2021-2022"];
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const contentDir = path.join(process.cwd(), "content", "pages", "gallery");
+  const files = await fs.readdir(contentDir);
+  const slugs = files.filter(f => f.endsWith('.md')).map(f => path.basename(f, '.md'));
   return slugs.map((slug) => ({ slug }));
 }

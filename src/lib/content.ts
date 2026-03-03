@@ -5,11 +5,11 @@ import type { HeroContent, NewsItem } from "@/components/HomePage";
 
 const contentDir = path.join(process.cwd(), "content");
 
-export async function getHomeContent(): Promise<HeroContent> {
+export async function getHomeContent(): Promise<{ data: HeroContent; content: string }> {
   const file = path.join(contentDir, "pages", "home.md");
   const raw = await fs.readFile(file, "utf8");
   const parsed = matter(raw);
-  return parsed.data as HeroContent;
+  return { data: parsed.data as HeroContent, content: parsed.content };
 }
 
 export async function getNewsItems(limit?: number): Promise<NewsItem[]> {

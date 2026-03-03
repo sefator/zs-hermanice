@@ -54,16 +54,28 @@ export default async function OfficialPage({ params }: { params: Params }) {
   }
 }
 
-export async function generateStaticParams() {
-  const slugs = [
-    { slug: ["gdpr"] },
-    { slug: ["preventivni-programy"] },
-    { slug: ["rady-a-smernice", "vnitrni-rad-skolni-jidelny-vydejny"] },
-    { slug: ["rady-a-smernice", "vnitrni-rad-skolni-druziny"] },
-    { slug: ["rady-a-smernice", "klasifikacni-rad"] },
-    { slug: ["rady-a-smernice", "skolni-rad"] },
-    { slug: ["rady-a-smernice"] },
-    { slug: ["skolni-vzdelavaci-program"] }
-  ];
+async function getAllSlugs(dir: string, baseDir: string): Promise<string[]> {
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const entries = await fs.readdir(dir, { withFileTypes: true });
+  const slugs: string[] = [];
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      const subSlugs = await getAllSlugs(fullPath, baseDir);
+      slugs.push(...subSlugs);
+    } else if (entry.isFile() && entry.name.endsWith('.md')) {
+      const relative = path.relative(baseDir, fullPath);
+      const slug = relative.replace(/\.md$/, '');
+      slugs.push(slug);
+    }
+  }
   return slugs;
+}
+
+export async function generateStaticParams() {
+  const path = await import("node:path");
+  const contentDir = path.join(process.cwd(), "content", "pages", "official");
+  const slugs = await getAllSlugs(contentDir, contentDir);
+  return slugs.map((slug) => ({ slug: slug.split('/') }));
 }

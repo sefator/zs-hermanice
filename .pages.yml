@@ -39,6 +39,139 @@ content:
           - name: body
             label: Text
             type: text
+  - name: contact
+    label: Kontakt
+    type: collection
+    path: content/pages/contact
+    filename: "{slug}.md"
+    fields:
+      - name: title
+        label: Titulek
+        type: string
+        required: true
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+      - name: body
+        label: Obsah
+        type: text
+        required: true
+    view:
+      fields: [title, slug]
+      sort: [title]
+  - name: druzina
+    label: Družina
+    type: collection
+    path: content/pages/druzina
+    filename: "{slug}.md"
+    fields:
+      - name: title
+        label: Titulek
+        type: string
+        required: true
+      - name: downloads
+        label: Soubory ke stažení
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Popisek
+            type: string
+          - name: url
+            label: Odkaz
+            type: string
+      - name: body
+        label: Obsah
+        type: text
+        required: true
+    view:
+      fields: [title]
+      sort: [title]
+  - name: gallery
+    label: Fotogalerie
+    type: collection
+    path: content/pages/gallery
+    filename: "{year}-{month}.md"
+    fields:
+      - name: title
+        label: Titulek
+        type: string
+        required: true
+      - name: images
+        label: Obrázky
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Zdroj
+            type: image
+          - name: alt
+            label: Alternativní text
+            type: string
+      - name: body
+        label: Obsah
+        type: text
+        required: true
+    view:
+      fields: [title]
+      sort: [title]
+  - name: official
+    label: Úřední deska
+    type: collection
+    path: content/pages/official
+    filename: "{slug}.md"
+    fields:
+      - name: title
+        label: Titulek
+        type: string
+        required: true
+      - name: downloads
+        label: Soubory ke stažení
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Popisek
+            type: string
+          - name: url
+            label: Odkaz
+            type: string
+      - name: body
+        label: Obsah
+        type: text
+        required: true
+    view:
+      fields: [title]
+      sort: [title]
+  - name: school
+    label: Škola
+    type: collection
+    path: content/pages/school
+    filename: "{slug}.md"
+    fields:
+      - name: title
+        label: Titulek
+        type: string
+        required: true
+      - name: downloads
+        label: Soubory ke stažení
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Popisek
+            type: string
+          - name: url
+            label: Odkaz
+            type: string
+      - name: body
+        label: Obsah
+        type: text
+        required: true
+    view:
+      fields: [title]
+      sort: [title]
   - name: news
     label: Aktuality
     type: collection

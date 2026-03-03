@@ -54,12 +54,10 @@ export default async function SchoolPage({ params }: { params: Params }) {
 }
 
 export async function generateStaticParams() {
-  // For now, hardcode the slugs
-  const slugs = [
-    "organizace-skolniho-roku",
-    "dokumenty-skoly",
-    "stravovani",
-    "zapis-do-1-tridy",
-  ];
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const contentDir = path.join(process.cwd(), "content", "pages", "school");
+  const files = await fs.readdir(contentDir);
+  const slugs = files.filter(f => f.endsWith('.md')).map(f => path.basename(f, '.md'));
   return slugs.map((slug) => ({ slug }));
 }

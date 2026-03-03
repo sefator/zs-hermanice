@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import MarkdownIt from "markdown-it";
+
+const md = new MarkdownIt();
 
 export type HeroContent = {
   title: string;
@@ -26,11 +29,11 @@ export type NewsItem = {
 };
 
 type HomePageProps = {
-  hero: HeroContent;
+  hero: { data: HeroContent; content: string };
   news: NewsItem[];
 };
 
-export function HomePage({ hero, news }: HomePageProps) {
+export function HomePage({ hero: { data, content }, news }: HomePageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-clay-50 via-white to-clay-100 text-[#1e1b16]">
       <div className="mx-auto flex max-w-5xl flex-col gap-16 px-6 py-16">
@@ -40,22 +43,22 @@ export function HomePage({ hero, news }: HomePageProps) {
               ZŠ Heřmanice
             </p>
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
-              {hero.title}
+              {data.title}
             </h1>
-            <p className="text-lg text-[#5c5145]">{hero.lead}</p>
-            {hero.cta && (
+            <p className="text-lg text-[#5c5145]">{data.lead}</p>
+            {data.cta && (
               <Link
-                href={hero.cta.link}
+                href={data.cta.link}
                 className="inline-flex w-fit items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-black/30 transition hover:-translate-y-0.5"
               >
-                {hero.cta.label}
+                {data.cta.label}
               </Link>
             )}
           </div>
-          {hero.heroImage && (
+          {data.heroImage && (
             <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
               <Image
-                src={hero.heroImage}
+                src={data.heroImage}
                 alt="Školní život"
                 width={600}
                 height={400}
@@ -66,7 +69,7 @@ export function HomePage({ hero, news }: HomePageProps) {
           )}
         </header>
 
-        {hero.galleryTeasers && (
+        {data.galleryTeasers && (
           <section aria-labelledby="gallery-heading" className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
@@ -77,7 +80,7 @@ export function HomePage({ hero, news }: HomePageProps) {
               </div>
             </div>
             <div className="grid gap-5 md:grid-cols-5">
-              {hero.galleryTeasers.map((teaser) => (
+              {data.galleryTeasers.map((teaser) => (
                 <Link
                   key={teaser.title}
                   href={teaser.link}
@@ -107,7 +110,7 @@ export function HomePage({ hero, news }: HomePageProps) {
           </section>
         )}
 
-        {hero.projects && (
+        {data.projects && (
           <section aria-labelledby="projects-heading" className="space-y-6">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-clay-500">
@@ -116,7 +119,7 @@ export function HomePage({ hero, news }: HomePageProps) {
               <h2 id="projects-heading" className="text-3xl font-semibold">Naše hodnoty a aktivity</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {hero.projects.map((project) => (
+              {data.projects.map((project) => (
                 <article
                   key={project.title}
                   className="rounded-2xl border border-white/80 bg-white/80 p-6 shadow-sm"
@@ -140,7 +143,7 @@ export function HomePage({ hero, news }: HomePageProps) {
           </section>
         )}
 
-        {hero.testimonials && (
+        {data.testimonials && (
           <section aria-labelledby="testimonials-heading" className="space-y-6">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-clay-500">
@@ -149,7 +152,7 @@ export function HomePage({ hero, news }: HomePageProps) {
               <h2 id="testimonials-heading" className="text-3xl font-semibold">Co říkají rodiče</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
-              {hero.testimonials.map((testimonial) => (
+              {data.testimonials.map((testimonial) => (
                 <article
                   key={testimonial.name}
                   className="rounded-2xl border border-white/80 bg-white/80 p-6 shadow-sm"
@@ -178,13 +181,13 @@ export function HomePage({ hero, news }: HomePageProps) {
           </section>
         )}
 
-        {hero.schoolImages && (
+        {data.schoolImages && (
           <section aria-labelledby="school-images-heading" className="space-y-6">
             <div>
               <h2 id="school-images-heading" className="text-3xl font-semibold">Škola v obrazech</h2>
             </div>
             <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-7">
-              {hero.schoolImages.map((img, index) => (
+              {data.schoolImages.map((img, index) => (
                 <div
                   key={index}
                   className="aspect-square overflow-hidden rounded-lg border border-white/60 bg-white shadow-sm"
@@ -202,7 +205,7 @@ export function HomePage({ hero, news }: HomePageProps) {
           </section>
         )}
 
-        {hero.recentNews && (
+        {data.recentNews && (
           <section aria-labelledby="recent-news-heading" className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
@@ -219,7 +222,7 @@ export function HomePage({ hero, news }: HomePageProps) {
               </Link>
             </div>
             <div className="grid gap-5 md:grid-cols-3">
-              {hero.recentNews.map((item) => (
+              {data.recentNews.map((item) => (
                 <article
                   key={item.title}
                   className="flex h-full flex-col rounded-2xl border border-white/70 bg-white/80 p-5 shadow-sm"
@@ -249,13 +252,13 @@ export function HomePage({ hero, news }: HomePageProps) {
           </section>
         )}
 
-        {hero.sponsors && (
+        {data.sponsors && (
           <section aria-labelledby="sponsors-heading" className="space-y-6">
             <div>
               <h2 id="sponsors-heading" className="text-3xl font-semibold">Naši sponzoři</h2>
             </div>
             <div className="flex flex-wrap items-center gap-8">
-              {hero.sponsors.map((sponsor) => (
+              {data.sponsors.map((sponsor) => (
                 <div key={sponsor.name} className="flex flex-col items-center gap-2">
                   {sponsor.logo && (
                     <Image
@@ -278,6 +281,12 @@ export function HomePage({ hero, news }: HomePageProps) {
                 </div>
               ))}
             </div>
+          </section>
+        )}
+
+        {content && (
+          <section className="prose prose-lg max-w-none">
+            <div dangerouslySetInnerHTML={{ __html: md.render(content) }} />
           </section>
         )}
       </div>
