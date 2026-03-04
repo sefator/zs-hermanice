@@ -36,7 +36,7 @@ type HomePageProps = {
 export function HomePage({ hero: { data, content }, news }: HomePageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-clay-50 via-white to-clay-100 text-[#1e1b16]">
-      <div className="mx-auto flex max-w-5xl flex-col gap-16 px-6 py-16">
+      <div className="mx-auto flex flex-col gap-16 px-6 py-16">
         <header className="grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-center">
           <div className="space-y-5">
             <p className="text-sm uppercase tracking-[0.2em] text-clay-500">

@@ -4,7 +4,7 @@ lead: "Moderní výuka v srdci obce."
 cta:
   label: "Kontaktujte nás"
   link: "mailto:skola@hermaniceuoder.cz"
-heroImage: "/uploads/hero.jpg"
+heroImage: "/uploads/hero.png"
 galleryTeasers:
   - title: "2025/2026"
     date: "2025-09-29"
