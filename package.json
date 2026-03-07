@@ -12,7 +12,7 @@
     "sst:remove": "sst remove",
     "test": "vitest",
     "test:accessibility": "start-server-and-test start http://localhost:3000 pa11y-ci",
-    "test:axe": "start-server-and-test start http://localhost:3000 'axe http://localhost:3000 --exit'",
+    "test:axe": "start-server-and-test start http://localhost:3000 'node scripts/run-axe.mjs'",
     "test:lighthouse": "lhci autorun"
   },
   "dependencies": {

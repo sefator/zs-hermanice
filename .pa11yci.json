@@ -2,7 +2,13 @@
   "urls": [
     "http://localhost:3000",
     "http://localhost:3000/aktuality",
-    "http://localhost:3000/kontakt/na-skolu"
+    "http://localhost:3000/aktuality/2025-06-27-letni-prazdniny",
+    "http://localhost:3000/skola/organizace-skolniho-roku",
+    "http://localhost:3000/uredni-deska/rady-a-smernice/vnitrni-rad-skolni-druziny",
+    "http://localhost:3000/kontakt/na-skolu",
+    "http://localhost:3000/druzina/druzina",
+    "http://localhost:3000/fotogalerie/2023-2024",
+    "http://localhost:3000/vyhledavani"
   ],
   "defaults": {
     "timeout": 5000,
