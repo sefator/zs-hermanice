@@ -2,10 +2,29 @@ import { getPageContent } from "@/lib/content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import MarkdownIt from "markdown-it";
+import { createMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 
 const md = new MarkdownIt();
 
 type Params = Promise<{ slug: string }>;
+
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const { slug } = await params;
+  try {
+    const page = await getPageContent(`school/${slug}`);
+    return createMetadata({
+      title: `${page.title} - Škola`,
+      description: page.data.summary || page.data.description || "Informace o škole ZŠ Heřmanice.",
+      canonical: `/skola/${slug}`,
+    });
+  } catch {
+    return createMetadata({
+      title: "Stránka nenalezena - ZŠ Heřmanice",
+      canonical: `/skola/${slug}`,
+    });
+  }
+}
 
 export default async function SchoolPage({ params }: { params: Params }) {
   const { slug } = await params;

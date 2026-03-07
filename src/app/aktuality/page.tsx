@@ -1,5 +1,15 @@
 import Link from "next/link";
 import { getNewsItems } from "@/lib/content";
+import { createMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return createMetadata({
+    title: "Aktuality - ZŠ Heřmanice",
+    description: "Aktuální dění, akce a důležité informace z našeho školního života.",
+    canonical: "/aktuality",
+  });
+}
 
 export default async function AktualitaPage() {
   const news = await getNewsItems();
