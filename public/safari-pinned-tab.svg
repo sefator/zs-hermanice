@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260" height="260" viewBox="0 0 260 260">
+  <defs>
+    <clipPath id="clip-Favico">
+      <rect width="260" height="260"/>
+    </clipPath>
+  </defs>
+  <g id="Favico" clip-path="url(#clip-Favico)">
+    <rect width="260" height="260" fill="#fff"/>
+    <path id="Path_41" data-name="Path 41" d="M0,0H259.5V260H0Z" fill="#006b96"/>
+    <line id="Line_12" data-name="Line 12" x1="259.5" transform="translate(0.5 8.5)" fill="none" stroke="#b7b7b7" stroke-width="2" stroke-dasharray="3"/>
+    <line id="Line_13" data-name="Line 13" x1="259.5" transform="translate(0.5 251.5)" fill="none" stroke="#b7b7b7" stroke-width="2" stroke-dasharray="3"/>
+    <text id="Z" transform="translate(84 155)" fill="#fff" font-size="159" font-family="NunitoSans-Bold, Nunito Sans" font-weight="700"><tspan x="-47.859" y="0">Z</tspan></text>
+    <text id="Š" transform="translate(173 215)" fill="#fff" font-size="159" font-family="NunitoSans-Bold, Nunito Sans" font-weight="700"><tspan x="-50.721" y="0">Š</tspan></text>
+    <path id="Path_74" data-name="Path 74" d="M0,0S1.5,77.5,42,118s120,44,120,44H0Z" transform="translate(0 98)" fill="#ffda00"/>
+    <path id="Path_75" data-name="Path 75" d="M0,0S1.5,77.5,42,118s120,44,120,44H0Z" transform="translate(260 162) rotate(180)" fill="#ffda00"/>
+  </g>
+</svg>
