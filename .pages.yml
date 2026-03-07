@@ -39,6 +39,124 @@ content:
           - name: body
             label: Text
             type: text
+      - name: quickLinks
+        label: Rychlé odkazy
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titulek
+            type: string
+            required: true
+          - name: link
+            label: Odkaz
+            type: string
+            required: true
+      - name: galleryTeasers
+        label: Galerie – upoutávky
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titulek
+            type: string
+            required: true
+          - name: date
+            label: Datum
+            type: date
+            required: true
+          - name: image
+            label: Obrázek
+            type: image
+          - name: link
+            label: Odkaz
+            type: string
+      - name: projects
+        label: Projekty
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titulek
+            type: string
+            required: true
+          - name: summary
+            label: Perex
+            type: text
+          - name: image
+            label: Obrázek
+            type: image
+      - name: testimonials
+        label: Reference rodičů
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Jméno
+            type: string
+            required: true
+          - name: role
+            label: Role
+            type: string
+            required: true
+          - name: quote
+            label: Citace
+            type: text
+            required: true
+          - name: photo
+            label: Fotografie
+            type: image
+            required: true
+      - name: schoolImages
+        label: Obrázky školy
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Obrázek
+            type: image
+            required: true
+          - name: alt
+            label: Alternativní text
+            type: string
+            required: true
+      - name: recentNews
+        label: Aktuality
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titulek
+            type: string
+            required: true
+          - name: date
+            label: Datum
+            type: date
+            required: true
+          - name: summary
+            label: Perex
+            type: text
+          - name: image
+            label: Obrázek
+            type: image
+          - name: link
+            label: Odkaz
+            type: string
+      - name: sponsors
+        label: Sponzoři
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Jméno
+            type: string
+            required: true
+          - name: logo
+            label: Logo
+            type: image
+          - name: link
+            label: Odkaz
+            type: string
   - name: contact
     label: Kontakt
     type: collection
