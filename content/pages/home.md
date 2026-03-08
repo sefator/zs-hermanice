@@ -1,107 +1,123 @@
 ---
-title: "Škola, kde se děti učí s radostí"
-lead: "ZŠ Heřmanice u Oder – moderní výuka, otevřený přístup a propojení s přírodou. Objevte školu, která staví na hodnotách a komunitě."
+title: Škola, kde se děti učí s radostí
+lead: ZŠ Heřmanice u Oder – moderní výuka, otevřený přístup a propojení s
+  přírodou. Objevte školu, která staví na hodnotách a komunitě.
+heroImage: /uploads/hero.png
 cta:
-  label: "Prozkoumat školu"
-  link: "/skola/dokumenty-skoly"
-heroImage: "/uploads/hero.png"
+  label: Prozkoumat školu
+  link: /skola/dokumenty-skoly
 quickLinks:
-  - title: "Zápis do 1. třídy"
-    link: "/skola/zapis-do-1-tridy"
-  - title: "Školní družina"
-    link: "/druzina/druzina"
-  - title: "Organizace roku"
-    link: "/skola/organizace-skolniho-roku"
-  - title: "Stravování"
-    link: "/skola/stravovani"
+  - title: Zápis do 1. třídy
+    link: /skola/zapis-do-1-tridy
+  - title: Školní družina
+    link: /druzina/druzina
+  - title: Organizace roku
+    link: /skola/organizace-skolniho-roku
+  - title: Stravování
+    link: /skola/stravovani
 galleryTeasers:
-  - title: "2025/2026"
-    date: "2025-09-29"
-    image: "/uploads/gallery/2025-2026.jpg"
-    link: "/fotogalerie/2025-2026"
-  - title: "2024/2025"
-    date: "2024-10-03"
-    image: "/uploads/gallery/2024-2025.jpg"
-    link: "/fotogalerie/2024-2025"
-  - title: "2023/2024"
-    date: "2024-10-03"
-    image: "/uploads/gallery/2023-2024.jpg"
-    link: "/fotogalerie/2023-2024"
-  - title: "2022/2023"
-    date: "2022-10-05"
-    image: "/uploads/gallery/2022-2023.jpg"
-    link: "/fotogalerie/2022-2023"
-  - title: "2021/2022"
-    date: "2022-10-05"
-    image: "/uploads/gallery/2021-2022.jpg"
-    link: "/fotogalerie/2021-2022"
+  - title: 2025/2026
+    date: 2025-09-29
+    image: /uploads/gallery/2025-2026.jpg
+    link: /fotogalerie/2025-2026
+  - title: 2024/2025
+    date: 2024-10-03
+    image: /uploads/gallery/2024-2025.jpg
+    link: /fotogalerie/2024-2025
+  - title: 2023/2024
+    date: 2024-10-03
+    image: /uploads/gallery/2023-2024.jpg
+    link: /fotogalerie/2023-2024
+  - title: 2022/2023
+    date: 2022-10-05
+    image: /uploads/gallery/2022-2023.jpg
+    link: /fotogalerie/2022-2023
+  - title: 2021/2022
+    date: 2022-10-05
+    image: /uploads/gallery/2021-2022.jpg
+    link: /fotogalerie/2021-2022
 projects:
-  - title: "Rodinná atmosféra"
-    summary: "Pracujeme v malém počtu dětí. To nám umožňuje individuální přístup a rozvoj celé osobnosti každého žáka."
-    image: "/uploads/projects/komunitni-centrum.jpg"
-  - title: "Učení venku"
-    summary: "Příroda je naše učebna. Třídíme, sázíme stromy, pořádáme Den Země a pravidelně vyrážíme do okolní krajiny."
-    image: "/uploads/projects/zelena-skola.jpg"
-  - title: "Hodnoty a srdce"
-    summary: "Pěstujeme empatii, soucit a zodpovědnost. Společně vytváříme bezpečné prostředí plné respektu a solidarity."
-    image: "/uploads/projects/velke-srdce.jpg"
-  - title: "Čtenářská gramotnost"
-    summary: "Vedeme děti k lásce ke knihám prostřednictvím projektů jako Noc s Andersenem nebo Celé Česko čte dětem."
-    image: "/uploads/projects/ctenarske-projekty.jpg"
+  - title: Rodinná atmosféra
+    summary: Pracujeme v malém počtu dětí. To nám umožňuje individuální přístup a
+      rozvoj celé osobnosti každého žáka.
+    image: /uploads/projects/komunitni-centrum.jpg
+  - title: Učení venku
+    summary: Příroda je naše učebna. Třídíme, sázíme stromy, pořádáme Den Země a
+      pravidelně vyrážíme do okolní krajiny.
+    image: /uploads/projects/zelena-skola.jpg
+  - title: Hodnoty a srdce
+    summary: Pěstujeme empatii, soucit a zodpovědnost. Společně vytváříme bezpečné
+      prostředí plné respektu a solidarity.
+    image: /uploads/projects/velke-srdce.jpg
+  - title: Čtenářská gramotnost
+    summary: Vedeme děti k lásce ke knihám prostřednictvím projektů jako Noc s
+      Andersenem nebo Celé Česko čte dětem.
+    image: /uploads/projects/ctenarske-projekty.jpg
 testimonials:
-  - name: "JAN KŘIVONOŽKA"
-    role: "tatínek"
-    quote: "Heřmanická škola je místem, kde se děti učí od skvělých a nadšených učitelů, kteří navíc do výuky formou projektů zapojují rodiče a místní profesionály různých profesí. Děti nám díky škole doslova kvetou před očima a my s nimi prožíváme vzdělávací euforii a velkou radost. Díky škole se přirozená hravost, kreativita a emptatie dětí neztrácí, ale naopak prohlubuje. Oceňujeme i kvalitní kroužky, zejména angličtinu a včelařský kroužek. Heřmanickou školu bychom přáli zažít snad každému!"
-    photo: "/uploads/testimonials/jan-krivonozka.jpg"
-  - name: "VENDULA JAROŠOVÁ"
-    role: "starostka obce Heřmanice u Oder"
-    quote: "Škola v Heřmanicích u Oder dává prostor k rozvoji celé osobnosti, pracuje se v malém počtu dětí a je kladen důraz na vztah a soulad s přírodou."
-    photo: "/uploads/testimonials/vendula-jarosova.jpg"
+  - name: VENDULA JAROŠOVÁ
+    role: starostka obce Heřmanice u Oder
+    quote: Škola v Heřmanicích u Oder dává prostor k rozvoji celé osobnosti, pracuje
+      se v malém počtu dětí a je kladen důraz na vztah a soulad s přírodou.
+    photo: /uploads/testimonials/vendula-jarosova.jpg
+  - name: JAN KŘIVONOŽKA
+    role: tatínek
+    quote: Heřmanická škola je místem, kde se děti učí od skvělých a nadšených
+      učitelů, kteří navíc do výuky formou projektů zapojují rodiče a místní
+      profesionály různých profesí. Děti nám díky škole doslova kvetou před
+      očima a my s nimi prožíváme vzdělávací euforii a velkou radost. Díky škole
+      se přirozená hravost, kreativita a emptatie dětí neztrácí, ale naopak
+      prohlubuje. Oceňujeme i kvalitní kroužky, zejména angličtinu a včelařský
+      kroužek. Heřmanickou školu bychom přáli zažít snad každému!
+    photo: /uploads/testimonials/jan-krivonozka.jpg
 schoolImages:
-  - image: "/uploads/home/op-jak.jpg"
-    alt: "OP JAK"
-  - image: "/uploads/home/venkovni-vyuka.jpg"
-    alt: "venkovní výuka"
-  - image: "/uploads/home/prototypci.jpg"
-    alt: "prototýpci"
-  - image: "/uploads/home/map3.jpg"
-    alt: "map3"
-  - image: "/uploads/home/op-jak-2.jpg"
-    alt: "op jak"
-  - image: "/uploads/home/doucovani.jpg"
-    alt: "doučování"
-  - image: "/uploads/home/digitalizujeme.jpg"
-    alt: "digitalizujeme"
+  - image: /uploads/home/op-jak.jpg
+    alt: OP JAK
+  - image: /uploads/home/venkovni-vyuka.jpg
+    alt: venkovní výuka
+  - image: /uploads/home/prototypci.jpg
+    alt: prototýpci
+  - image: /uploads/home/map3.jpg
+    alt: map3
+  - image: /uploads/home/op-jak-2.jpg
+    alt: op jak
+  - image: /uploads/home/doucovani.jpg
+    alt: doučování
+  - image: /uploads/home/digitalizujeme.jpg
+    alt: digitalizujeme
 recentNews:
-  - title: "Oznámení o přerušení provozu v době jarních prázdnin"
-    date: "2026-02-24"
-    summary: "Vážení rodiče, milí žáci, ve dnech 2. 3. – 6. 3. 2026 proběhnou jarní prázdniny. V tomto období bude provoz školy, školní družiny i výdejny stravy uzavřen. Obvyklý provoz bude znovu zahájen v pondělí 9. 3. 2026. Děkujeme za pochopení. Vedení školy"
-    image: "/uploads/news/prazdniny.jpg"
-    link: "/aktuality/2026-02-24-oznameni-o-preruseni-provozu-v-dobe-jarnich-prazdnin"
-  - title: "Srdečně zveme všechny děti na DĚTSKÝ KARNEVAL!"
-    date: "2025-12-30"
-    summary: "KDY: 25. ledna 2026 od 15:00 hod. KDE: Hospůdka Na návsi Čeká vás zábavné vystoupení Klauna Pepina Prcka! Masky nasadit, úsměvy připravit a hurá na karneval!"
-    image: "/uploads/news/karneval.jpg"
-    link: "/aktuality/2025-12-30-srdecne-zveme-vsechny-deti-na-detsky-karneval"
-  - title: "Krásné Vánoce a šťastný nový rok!"
-    date: "2025-12-12"
-    summary: "Všem žákům, rodičům, zaměstnancům i přátelům školy přinášíme přání klidných a radostných Vánoc plných pohody a vzájemné blízkosti. Do nového roku ať Vás provází zdraví, štěstí, inspirace a mnoho úspěchů. S přáním všeho dobrého ZŠ Heřmanice u Oder"
-    image: "/uploads/news/vanoce.jpg"
-    link: "/aktuality/2025-12-12-krasne-vanoce-a-stastny-novy-rok"
+  - title: Oznámení o přerušení provozu v době jarních prázdnin
+    date: 2026-02-24
+    summary: Vážení rodiče, milí žáci, ve dnech 2. 3. – 6. 3. 2026 proběhnou jarní
+      prázdniny. V tomto období bude provoz školy, školní družiny i výdejny
+      stravy uzavřen. Obvyklý provoz bude znovu zahájen v pondělí 9. 3. 2026.
+      Děkujeme za pochopení. Vedení školy
+    image: /uploads/news/prazdniny.jpg
+    link: /aktuality/2026-02-24-oznameni-o-preruseni-provozu-v-dobe-jarnich-prazdnin
+  - title: Srdečně zveme všechny děti na DĚTSKÝ KARNEVAL!
+    date: 2025-12-30
+    summary: "KDY: 25. ledna 2026 od 15:00 hod. KDE: Hospůdka Na návsi Čeká vás
+      zábavné vystoupení Klauna Pepina Prcka! Masky nasadit, úsměvy připravit a
+      hurá na karneval!"
+    image: /uploads/news/karneval.jpg
+    link: /aktuality/2025-12-30-srdecne-zveme-vsechny-deti-na-detsky-karneval
+  - title: Krásné Vánoce a šťastný nový rok!
+    date: 2025-12-12
+    summary: Všem žákům, rodičům, zaměstnancům i přátelům školy přinášíme přání
+      klidných a radostných Vánoc plných pohody a vzájemné blízkosti. Do nového
+      roku ať Vás provází zdraví, štěstí, inspirace a mnoho úspěchů. S přáním
+      všeho dobrého ZŠ Heřmanice u Oder
+    image: /uploads/news/vanoce.jpg
+    link: /aktuality/2025-12-12-krasne-vanoce-a-stastny-novy-rok
 sponsors:
-  - name: "EUROVIA"
-    logo: "/uploads/sponsors/eurovia.jpg"
-    link: "https://euroviakamenolomy.vinci-construction.cz/provozovny/jakubcovice"
-  - name: "SEMPERFLEX"
-    logo: "/uploads/sponsors/semperflex.jpg"
-    link: "http://praceodry.cz"
-  - name: "JAN KŘIVONOŽKA Kamnářství"
-    logo: ""
-    link: "https://www.krivonozka.cz/"
-  - name: "VLADAN DITTRICH"
-    logo: ""
-    link: ""
-  - name: "HINATIO"
-    link: "https://www.hinatio.cz"
-
+  - name: EUROVIA
+    logo: /uploads/sponsors/eurovia.jpg
+    link: https://euroviakamenolomy.vinci-construction.cz/provozovny/jakubcovice
+  - name: SEMPERFLEX
+    logo: /uploads/sponsors/semperflex.jpg
+    link: http://praceodry.cz
+  - name: HINATIO
+    link: https://www.hinatio.cz
+  - name: JAN KŘIVONOŽKA Kamnářství
+    link: https://www.krivonozka.cz/
+  - name: VLADAN DITTRICH
 ---
