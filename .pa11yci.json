@@ -8,7 +8,8 @@
     "http://localhost:3000/kontakt/na-skolu",
     "http://localhost:3000/druzina/druzina",
     "http://localhost:3000/fotogalerie/2023-2024",
-    "http://localhost:3000/vyhledavani"
+    "http://localhost:3000/vyhledavani",
+    "http://localhost:3000/rozvrh"
   ],
   "defaults": {
     "timeout": 5000,

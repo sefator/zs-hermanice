@@ -16,9 +16,10 @@ export default async function SearchPage({ searchParams }: { searchParams: Searc
           name="q"
           defaultValue={q || ""}
           placeholder="Zadejte vyhledávaný výraz..."
+          aria-label="Vyhledávaný výraz"
           className="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:border-clay-500 focus:outline-none"
         />
-        <button type="submit" className="rounded-lg bg-clay-500 px-6 py-2 text-white hover:bg-clay-600">
+        <button type="submit" className="rounded-lg bg-gray-800 px-6 py-2 text-white hover:bg-gray-900">
           Hledat
         </button>
       </form>

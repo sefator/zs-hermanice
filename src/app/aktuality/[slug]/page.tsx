@@ -73,7 +73,7 @@ export default async function NewsDetailPage({ params }: { params: Params }) {
         <Breadcrumbs items={[{ label: "Aktuality", href: "/aktuality" }]} />
         <article className="space-y-6">
           <header>
-            <p className="text-xs uppercase tracking-[0.3em] text-clay-500">
+            <p className="text-xs uppercase tracking-[0.3em] text-clay-900">
               {new Date(item.date).toLocaleDateString("cs-CZ", {
                 day: "2-digit",
                 month: "2-digit",

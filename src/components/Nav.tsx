@@ -34,6 +34,7 @@ export function Nav() {
           <div className="flex items-center gap-6 font-medium">
             <Link href="/kontakt/e-podatelna" className="hover:text-accent-300 transition-colors">E-podatelna</Link>
             <Link href="/skola/stravovani" className="hover:text-accent-300 transition-colors">Jídelna</Link>
+            <Link href="/rozvrh" className="hover:text-accent-300 transition-colors">Rozvrhy</Link>
             <Link href="https://bakalari.cz" target="_blank" className="hover:text-accent-300 transition-colors">Bakaláři</Link>
           </div>
         </div>
@@ -58,13 +59,14 @@ export function Nav() {
                   Škola
                   <svg className="ml-1.5 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </button>
-                <div className="absolute left-0 top-full mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-b-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col py-2 overflow-hidden">
-                  <Link href="/skola/organizace-skolniho-roku" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Organizace školního roku</Link>
-                  <Link href="/aktuality" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Aktuality</Link>
-                  <Link href="/skola/dokumenty-skoly" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Dokumenty školy</Link>
-                  <Link href="/skola/stravovani" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Stravování</Link>
-                  <Link href="/skola/zapis-do-1-tridy" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Zápis do 1. třídy</Link>
-                </div>
+                 <div className="absolute left-0 top-full mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-b-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col py-2 overflow-hidden">
+                   <Link href="/skola/organizace-skolniho-roku" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Organizace školního roku</Link>
+                   <Link href="/aktuality" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Aktuality</Link>
+                   <Link href="/rozvrh" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Rozvrhy</Link>
+                   <Link href="/skola/dokumenty-skoly" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Dokumenty školy</Link>
+                   <Link href="/skola/stravovani" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Stravování</Link>
+                   <Link href="/skola/zapis-do-1-tridy" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">Zápis do 1. třídy</Link>
+                 </div>
               </li>
               <li className="h-full flex items-center px-4">
                 <Link href="/druzina/druzina" className="hover:text-accent-700 transition-colors py-2">
@@ -177,6 +179,7 @@ export function Nav() {
                   <ul className="pl-4 mt-2 space-y-1 mb-4 text-base text-gray-600">
                     <li><Link href="/skola/organizace-skolniho-roku" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Organizace školního roku</Link></li>
                     <li><Link href="/aktuality" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Aktuality</Link></li>
+                    <li><Link href="/rozvrh" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Rozvrhy</Link></li>
                     <li><Link href="/skola/dokumenty-skoly" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Dokumenty školy</Link></li>
                     <li><Link href="/skola/stravovani" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Stravování</Link></li>
                     <li><Link href="/skola/zapis-do-1-tridy" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Zápis do 1. třídy</Link></li>
@@ -245,13 +248,14 @@ export function Nav() {
               </li>
             </ul>
             
-            <div className="mt-8 bg-brand-50 p-6 rounded-2xl">
-               <h3 className="text-sm font-bold text-brand-900 mb-3 uppercase tracking-wider">Rychlé odkazy</h3>
-               <div className="flex flex-col gap-3">
-                 <Link href="/skola/stravovani" onClick={() => setMobileMenuOpen(false)} className="text-brand-700 hover:text-accent-700">Jídelna</Link>
-                 <Link href="https://bakalari.cz" onClick={() => setMobileMenuOpen(false)} className="text-brand-700 hover:text-accent-700">Bakaláři</Link>
-               </div>
-            </div>
+             <div className="mt-8 bg-brand-50 p-6 rounded-2xl">
+                <h3 className="text-sm font-bold text-brand-900 mb-3 uppercase tracking-wider">Rychlé odkazy</h3>
+                <div className="flex flex-col gap-3">
+                  <Link href="/skola/stravovani" onClick={() => setMobileMenuOpen(false)} className="text-brand-700 hover:text-accent-700">Jídelna</Link>
+                  <Link href="/rozvrh" onClick={() => setMobileMenuOpen(false)} className="text-brand-700 hover:text-accent-700">Rozvrhy</Link>
+                  <Link href="https://bakalari.cz" onClick={() => setMobileMenuOpen(false)} className="text-brand-700 hover:text-accent-700">Bakaláři</Link>
+                </div>
+             </div>
           </div>
         </div>
       )}

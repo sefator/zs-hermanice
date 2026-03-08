@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
 import type { HeroContent, NewsItem } from "@/components/HomePage";
+import type { RozvrhContent } from "@/types/rozvrh";
 
 const contentDir = path.join(process.cwd(), "content");
 
@@ -10,6 +11,13 @@ export async function getHomeContent(): Promise<{ data: HeroContent; content: st
   const raw = await fs.readFile(file, "utf8");
   const parsed = matter(raw);
   return { data: parsed.data as HeroContent, content: parsed.content };
+}
+
+export async function getRozvrhContent(): Promise<{ data: RozvrhContent; content: string }> {
+  const file = path.join(contentDir, "pages", "rozvrh.md");
+  const raw = await fs.readFile(file, "utf8");
+  const parsed = matter(raw);
+  return { data: parsed.data as RozvrhContent, content: parsed.content };
 }
 
 export async function getNewsItems(limit?: number): Promise<NewsItem[]> {
