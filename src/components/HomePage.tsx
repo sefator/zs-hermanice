@@ -291,15 +291,33 @@ export function HomePage({ hero: { data, content }, news }: HomePageProps) {
               {data.sponsors.map((sponsor) => (
                 <div key={sponsor.name} className="flex flex-col items-center gap-3">
                   {sponsor.logo ? (
-                    <Image
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      width={120}
-                      height={60}
-                      className="object-contain max-h-[60px] w-auto"
-                    />
+                    sponsor.link ? (
+                      <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                        <Image
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          width={120}
+                          height={60}
+                          className="object-contain max-h-[60px] w-auto"
+                        />
+                      </a>
+                    ) : (
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={120}
+                        height={60}
+                        className="object-contain max-h-[60px] w-auto"
+                      />
+                    )
                   ) : (
-                    <span className="font-display font-bold text-xl text-brand-900">{sponsor.name}</span>
+                    sponsor.link ? (
+                      <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                        <span className="font-display font-bold text-xl text-brand-900">{sponsor.name}</span>
+                      </a>
+                    ) : (
+                      <span className="font-display font-bold text-xl text-brand-900">{sponsor.name}</span>
+                    )
                   )}
                 </div>
               ))}

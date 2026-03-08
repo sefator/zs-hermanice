@@ -96,11 +96,11 @@ export function Nav() {
                   <Link href="/uredni-deska/gdpr" className="px-5 py-2.5 hover:bg-brand-50 hover:text-accent-700 transition-colors text-sm">GDPR</Link>
                 </div>
               </li>
-              <li className="h-full flex items-center px-4">
-                <Link href="/fotogalerie/2025-2026" className="hover:text-accent-700 transition-colors py-2">
-                  Fotogalerie
-                </Link>
-              </li>
+               <li className="h-full flex items-center px-4">
+                 <Link href="/fotogalerie" className="hover:text-accent-700 transition-colors py-2">
+                   Fotogalerie
+                 </Link>
+               </li>
               <li className="relative group h-full flex items-center px-4">
                 <button className="flex items-center hover:text-accent-700 transition-colors py-2">
                   Kontakt
@@ -224,11 +224,11 @@ export function Nav() {
                   </ul>
                 )}
               </li>
-              <li>
-                <Link href="/fotogalerie/2025-2026" className="block py-3 border-b border-gray-100" onClick={() => setMobileMenuOpen(false)}>
-                  Fotogalerie
-                </Link>
-              </li>
+               <li>
+                 <Link href="/fotogalerie" className="block py-3 border-b border-gray-100" onClick={() => setMobileMenuOpen(false)}>
+                   Fotogalerie
+                 </Link>
+               </li>
               <li>
                 <button
                   onClick={() => setMobileKontaktOpen(!mobileKontaktOpen)}

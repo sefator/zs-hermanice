@@ -101,5 +101,7 @@ sponsors:
   - name: "VLADAN DITTRICH"
     logo: ""
     link: ""
+  - name: "HINATIO"
+    link: "https://www.hinatio.cz"
 
 ---

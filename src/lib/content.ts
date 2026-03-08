@@ -3,6 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import type { HeroContent, NewsItem } from "@/components/HomePage";
 import type { RozvrhContent } from "@/types/rozvrh";
+import type { GalleryItem } from "@/types/gallery";
 
 const contentDir = path.join(process.cwd(), "content");
 
@@ -41,6 +42,28 @@ export async function getNewsItems(limit?: number): Promise<NewsItem[]> {
 
   const sorted = newsItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   return limit ? sorted.slice(0, limit) : sorted;
+}
+
+export async function getGalleries(): Promise<GalleryItem[]> {
+  const galleryDir = path.join(contentDir, "pages", "gallery");
+  const files = await fs.readdir(galleryDir);
+  const galleries: GalleryItem[] = [];
+
+  for (const file of files) {
+    if (file.endsWith('.md')) {
+      const filePath = path.join(galleryDir, file);
+      const raw = await fs.readFile(filePath, "utf8");
+      const parsed = matter(raw);
+      const slug = path.basename(file, '.md');
+      galleries.push({
+        ...parsed.data as Omit<GalleryItem, 'slug'>,
+        slug,
+      });
+    }
+  }
+
+  const sorted = galleries.sort((a, b) => b.slug.localeCompare(a.slug));
+  return sorted;
 }
 
 export async function getPageContent(slug: string): Promise<{ title: string; content: string; data: any }> {
