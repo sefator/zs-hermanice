@@ -6,7 +6,7 @@ let hasErrors = false;
 for (const url of accessibilityUrls) {
   try {
     execSync(`axe ${url} --exit`, { stdio: 'inherit' });
-  } catch (error) {
+  } catch {
     console.error(`Axe failed for ${url}`);
     hasErrors = true;
   }

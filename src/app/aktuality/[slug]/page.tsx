@@ -1,7 +1,6 @@
 import { getNewsItems } from "@/lib/content";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import MarkdownIt from "markdown-it";
 import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";

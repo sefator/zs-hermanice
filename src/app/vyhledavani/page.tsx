@@ -26,10 +26,10 @@ export default async function SearchPage({ searchParams }: { searchParams: Searc
       {!q ? (
         <p>Zadejte výraz pro vyhledávání.</p>
       ) : results.length === 0 ? (
-        <p>Nic jsme nenašli pro "{q}". Zkuste jiný výraz.</p>
+        <p>Nic jsme nenašli pro &quot;{q}&quot;. Zkuste jiný výraz.</p>
       ) : (
         <div className="space-y-4">
-          <p>{results.length} výsledků pro "{q}"</p>
+          <p>{results.length} výsledků pro &quot;{q}&quot;</p>
           {results.map((result) => (
             <article key={result.id} className="rounded-2xl border border-white/70 bg-white/80 p-5 shadow-sm">
               <div className="flex items-center gap-2 mb-2">
