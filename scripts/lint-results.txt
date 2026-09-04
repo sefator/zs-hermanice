@@ -1,0 +1,879 @@
+
+/opt/data/projects/webdev/zs-hermanice/src/app/aktuality/[slug]/page.tsx
+  4:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx
+  15:7   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:15:7
+  13 |     const page = await getPageContent(`druzina/${slug}`);
+  14 |     return (
+> 15 |       <div className="mx-auto max-w-4xl px-6 py-16">
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |         <Link
+     | ^^^^^^^^^^^^^
+> 17 |           href="/"
+     …
+     | ^^^^^^^^^^^^^
+> 48 |         </article>
+     | ^^^^^^^^^^^^^
+> 49 |       </div>
+     | ^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  50 |     );
+  51 |   } catch {
+  52 |     notFound();                                                                                                                                                                                                                                                                                                                                    react-hooks/error-boundaries
+  16:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:16:9
+  14 |     return (
+  15 |       <div className="mx-auto max-w-4xl px-6 py-16">
+> 16 |         <Link
+     |         ^^^^^
+> 17 |           href="/"
+     | ^^^^^^^^^^^^^^^^^^
+> 18 |           className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline"
+     | ^^^^^^^^^^^^^^^^^^
+> 19 |         >
+     | ^^^^^^^^^^^^^^^^^^
+> 20 |           ← Zpět na hlavní stránku
+     | ^^^^^^^^^^^^^^^^^^
+> 21 |         </Link>
+     | ^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  22 |         <article className="space-y-6">
+  23 |           <header>
+  24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">                                                                                                                                                      react-hooks/error-boundaries
+  22:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:22:9
+  20 |           ← Zpět na hlavní stránku
+  21 |         </Link>
+> 22 |         <article className="space-y-6">
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |           <header>
+     | ^^^^^^^^^^^^^^^^^^
+> 24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     …
+     | ^^^^^^^^^^^^^^^^^^
+> 47 |           )}
+     | ^^^^^^^^^^^^^^^^^^
+> 48 |         </article>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  49 |       </div>
+  50 |     );
+  51 |   } catch {                                                                                                                                                                                                                                                                                                           react-hooks/error-boundaries
+  23:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:23:11
+  21 |         </Link>
+  22 |         <article className="space-y-6">
+> 23 |           <header>
+     |           ^^^^^^^^
+> 24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |           </header>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  28 |           <div className="prose prose-lg max-w-none">
+  29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+  30 |           </div>                                                              react-hooks/error-boundaries
+  24:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:24:13
+  22 |         <article className="space-y-6">
+  23 |           <header>
+> 24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  27 |           </header>
+  28 |           <div className="prose prose-lg max-w-none">
+  29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />                                                                                                                                                                                                                                                           react-hooks/error-boundaries
+  28:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:28:11
+  26 |             </h1>
+  27 |           </header>
+> 28 |           <div className="prose prose-lg max-w-none">
+     |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |           </div>
+     | ^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  31 |           {page.data.downloads && (
+  32 |             <div className="space-y-4">
+  33 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>                                                                                                                                                                                                 react-hooks/error-boundaries
+  29:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:29:13
+  27 |           </header>
+  28 |           <div className="prose prose-lg max-w-none">
+> 29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  30 |           </div>
+  31 |           {page.data.downloads && (
+  32 |             <div className="space-y-4">                                                                                                                                                                                                                                                                                                                                                                                                    react-hooks/error-boundaries
+  32:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:32:13
+  30 |           </div>
+  31 |           {page.data.downloads && (
+> 32 |             <div className="space-y-4">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |               <ul className="space-y-2">
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 45 |               </ul>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 46 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  47 |           )}
+  48 |         </article>
+  49 |       </div>                                                                      react-hooks/error-boundaries
+  33:15  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:33:15
+  31 |           {page.data.downloads && (
+  32 |             <div className="space-y-4">
+> 33 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  34 |               <ul className="space-y-2">
+  35 |                 {page.data.downloads.map((download: any, index: number) => (
+  36 |                   <li key={index}>                                                                                                                                                                                                                                                                                                                                                react-hooks/error-boundaries
+  34:15  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/druzina/[slug]/page.tsx:34:15
+  32 |             <div className="space-y-4">
+  33 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+> 34 |               <ul className="space-y-2">
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |                 {page.data.downloads.map((download: any, index: number) => (
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |                   <li key={index}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 44 |                 ))}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 45 |               </ul>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  46 |             </div>
+  47 |           )}
+  48 |         </article>  react-hooks/error-boundaries
+  35:53  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx
+  16:7   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:16:7
+  14 |     const page = await getPageContent(`gallery/${slug}`);
+  15 |     return (
+> 16 |       <div className="mx-auto max-w-6xl px-6 py-16">
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |         <Link
+     | ^^^^^^^^^^^^^
+> 18 |           href="/"
+     …
+     | ^^^^^^^^^^^^^
+> 47 |         </article>
+     | ^^^^^^^^^^^^^
+> 48 |       </div>
+     | ^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  49 |     );
+  50 |   } catch {
+  51 |     notFound();                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react-hooks/error-boundaries
+  17:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:17:9
+  15 |     return (
+  16 |       <div className="mx-auto max-w-6xl px-6 py-16">
+> 17 |         <Link
+     |         ^^^^^
+> 18 |           href="/"
+     | ^^^^^^^^^^^^^^^^^^
+> 19 |           className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline"
+     | ^^^^^^^^^^^^^^^^^^
+> 20 |         >
+     | ^^^^^^^^^^^^^^^^^^
+> 21 |           ← Zpět na hlavní stránku
+     | ^^^^^^^^^^^^^^^^^^
+> 22 |         </Link>
+     | ^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  23 |         <article className="space-y-6">
+  24 |           <header>
+  25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">                                                                                                                                                                                                                                                                                    react-hooks/error-boundaries
+  23:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:23:9
+  21 |           ← Zpět na hlavní stránku
+  22 |         </Link>
+> 23 |         <article className="space-y-6">
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |           <header>
+     | ^^^^^^^^^^^^^^^^^^
+> 25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     …
+     | ^^^^^^^^^^^^^^^^^^
+> 46 |           )}
+     | ^^^^^^^^^^^^^^^^^^
+> 47 |         </article>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  48 |       </div>
+  49 |     );
+  50 |   } catch {                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/error-boundaries
+  24:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:24:11
+  22 |         </Link>
+  23 |         <article className="space-y-6">
+> 24 |           <header>
+     |           ^^^^^^^^
+> 25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |           </header>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  29 |           <div className="prose prose-lg max-w-none">
+  30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+  31 |           </div>                                                                                                                                                                                            react-hooks/error-boundaries
+  25:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:25:13
+  23 |         <article className="space-y-6">
+  24 |           <header>
+> 25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  28 |           </header>
+  29 |           <div className="prose prose-lg max-w-none">
+  30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/error-boundaries
+  29:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:29:11
+  27 |             </h1>
+  28 |           </header>
+> 29 |           <div className="prose prose-lg max-w-none">
+     |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |           </div>
+     | ^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  32 |           {page.data.images && (
+  33 |             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  34 |               {page.data.images.map((img: { src: string; alt: string }, index: number) => (                                                                                                                                                                                                                                                                        react-hooks/error-boundaries
+  30:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:30:13
+  28 |           </header>
+  29 |           <div className="prose prose-lg max-w-none">
+> 30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  31 |           </div>
+  32 |           {page.data.images && (
+  33 |             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/error-boundaries
+  33:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/fotogalerie/[slug]/page.tsx:33:13
+  31 |           </div>
+  32 |           {page.data.images && (
+> 33 |             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |               {page.data.images.map((img: { src: string; alt: string }, index: number) => (
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |                 <div key={index} className="aspect-square overflow-hidden rounded-lg border">
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 44 |               ))}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 45 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  46 |           )}
+  47 |         </article>
+  48 |       </div>  react-hooks/error-boundaries
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx
+  15:7   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx:15:7
+  13 |     const page = await getPageContent(`contact/${slug}`);
+  14 |     return (
+> 15 |       <div className="mx-auto max-w-4xl px-6 py-16">
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |         <Link
+     | ^^^^^^^^^^^^^
+> 17 |           href="/"
+     …
+     | ^^^^^^^^^^^^^
+> 31 |         </article>
+     | ^^^^^^^^^^^^^
+> 32 |       </div>
+     | ^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  33 |     );
+  34 |   } catch {
+  35 |     notFound();                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/error-boundaries
+  16:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx:16:9
+  14 |     return (
+  15 |       <div className="mx-auto max-w-4xl px-6 py-16">
+> 16 |         <Link
+     |         ^^^^^
+> 17 |           href="/"
+     | ^^^^^^^^^^^^^^^^^^
+> 18 |           className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline"
+     | ^^^^^^^^^^^^^^^^^^
+> 19 |         >
+     | ^^^^^^^^^^^^^^^^^^
+> 20 |           ← Zpět na hlavní stránku
+     | ^^^^^^^^^^^^^^^^^^
+> 21 |         </Link>
+     | ^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  22 |         <article className="space-y-6">
+  23 |           <header>
+  24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">                                                                                                                                                                                                                        react-hooks/error-boundaries
+  22:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx:22:9
+  20 |           ← Zpět na hlavní stránku
+  21 |         </Link>
+> 22 |         <article className="space-y-6">
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |           <header>
+     | ^^^^^^^^^^^^^^^^^^
+> 24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     | ^^^^^^^^^^^^^^^^^^
+> 25 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^
+> 26 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^
+> 27 |           </header>
+     | ^^^^^^^^^^^^^^^^^^
+> 28 |           <div className="prose prose-lg max-w-none">
+     | ^^^^^^^^^^^^^^^^^^
+> 29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     | ^^^^^^^^^^^^^^^^^^
+> 30 |           </div>
+     | ^^^^^^^^^^^^^^^^^^
+> 31 |         </article>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  32 |       </div>
+  33 |     );
+  34 |   } catch {  react-hooks/error-boundaries
+  23:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx:23:11
+  21 |         </Link>
+  22 |         <article className="space-y-6">
+> 23 |           <header>
+     |           ^^^^^^^^
+> 24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |           </header>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  28 |           <div className="prose prose-lg max-w-none">
+  29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+  30 |           </div>                                                                                                                                react-hooks/error-boundaries
+  24:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx:24:13
+  22 |         <article className="space-y-6">
+  23 |           <header>
+> 24 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 25 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  27 |           </header>
+  28 |           <div className="prose prose-lg max-w-none">
+  29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />                                                                                                                                                                                                                                                                                                                             react-hooks/error-boundaries
+  28:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx:28:11
+  26 |             </h1>
+  27 |           </header>
+> 28 |           <div className="prose prose-lg max-w-none">
+     |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |           </div>
+     | ^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  31 |         </article>
+  32 |       </div>
+  33 |     );                                                                                                                                                                                                                                                                                                                                                                                     react-hooks/error-boundaries
+  29:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/kontakt/[slug]/page.tsx:29:13
+  27 |           </header>
+  28 |           <div className="prose prose-lg max-w-none">
+> 29 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  30 |           </div>
+  31 |         </article>
+  32 |       </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react-hooks/error-boundaries
+
+/opt/data/projects/webdev/zs-hermanice/src/app/rozvrh/error.tsx
+  3:33  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx
+  34:7   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:34:7
+  32 |     const page = await getPageContent(`school/${slug}`);
+  33 |     return (
+> 34 |       <div className="mx-auto max-w-4xl px-6 py-16">
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |         <Link
+     | ^^^^^^^^^^^^^
+> 36 |           href="/"
+     …
+     | ^^^^^^^^^^^^^
+> 67 |         </article>
+     | ^^^^^^^^^^^^^
+> 68 |       </div>
+     | ^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  69 |     );
+  70 |   } catch {
+  71 |     notFound();                                                                                                                                                                                                                                                                                                                                     react-hooks/error-boundaries
+  35:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:35:9
+  33 |     return (
+  34 |       <div className="mx-auto max-w-4xl px-6 py-16">
+> 35 |         <Link
+     |         ^^^^^
+> 36 |           href="/"
+     | ^^^^^^^^^^^^^^^^^^
+> 37 |           className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline"
+     | ^^^^^^^^^^^^^^^^^^
+> 38 |         >
+     | ^^^^^^^^^^^^^^^^^^
+> 39 |           ← Zpět na hlavní stránku
+     | ^^^^^^^^^^^^^^^^^^
+> 40 |         </Link>
+     | ^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  41 |         <article className="space-y-6">
+  42 |           <header>
+  43 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">                                                                                                                                                      react-hooks/error-boundaries
+  41:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:41:9
+  39 |           ← Zpět na hlavní stránku
+  40 |         </Link>
+> 41 |         <article className="space-y-6">
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 42 |           <header>
+     | ^^^^^^^^^^^^^^^^^^
+> 43 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     …
+     | ^^^^^^^^^^^^^^^^^^
+> 66 |           )}
+     | ^^^^^^^^^^^^^^^^^^
+> 67 |         </article>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  68 |       </div>
+  69 |     );
+  70 |   } catch {                                                                                                                                                                                                                                                                                                           react-hooks/error-boundaries
+  42:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:42:11
+  40 |         </Link>
+  41 |         <article className="space-y-6">
+> 42 |           <header>
+     |           ^^^^^^^^
+> 43 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 44 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 45 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 46 |           </header>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  47 |           <div className="prose prose-lg max-w-none">
+  48 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+  49 |           </div>                                                              react-hooks/error-boundaries
+  43:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:43:13
+  41 |         <article className="space-y-6">
+  42 |           <header>
+> 43 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 44 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 45 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  46 |           </header>
+  47 |           <div className="prose prose-lg max-w-none">
+  48 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />                                                                                                                                                                                                                                                           react-hooks/error-boundaries
+  47:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:47:11
+  45 |             </h1>
+  46 |           </header>
+> 47 |           <div className="prose prose-lg max-w-none">
+     |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 48 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 49 |           </div>
+     | ^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  50 |           {page.data.downloads && (
+  51 |             <div className="space-y-4">
+  52 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>                                                                                                                                                                                                 react-hooks/error-boundaries
+  48:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:48:13
+  46 |           </header>
+  47 |           <div className="prose prose-lg max-w-none">
+> 48 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  49 |           </div>
+  50 |           {page.data.downloads && (
+  51 |             <div className="space-y-4">                                                                                                                                                                                                                                                                                                                                                                                                    react-hooks/error-boundaries
+  51:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:51:13
+  49 |           </div>
+  50 |           {page.data.downloads && (
+> 51 |             <div className="space-y-4">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 52 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 53 |               <ul className="space-y-2">
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 64 |               </ul>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 65 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  66 |           )}
+  67 |         </article>
+  68 |       </div>                                                                      react-hooks/error-boundaries
+  52:15  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:52:15
+  50 |           {page.data.downloads && (
+  51 |             <div className="space-y-4">
+> 52 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  53 |               <ul className="space-y-2">
+  54 |                 {page.data.downloads.map((download: any, index: number) => (
+  55 |                   <li key={index}>                                                                                                                                                                                                                                                                                                                                                react-hooks/error-boundaries
+  53:15  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/skola/[slug]/page.tsx:53:15
+  51 |             <div className="space-y-4">
+  52 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+> 53 |               <ul className="space-y-2">
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 54 |                 {page.data.downloads.map((download: any, index: number) => (
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |                   <li key={index}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |                 ))}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 64 |               </ul>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  65 |             </div>
+  66 |           )}
+  67 |         </article>  react-hooks/error-boundaries
+  54:53  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-explicit-any
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx
+  16:7   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:16:7
+  14 |     const page = await getPageContent(`official/${slugPath}`);
+  15 |     return (
+> 16 |       <div className="mx-auto max-w-4xl px-6 py-16">
+     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 17 |         <Link
+     | ^^^^^^^^^^^^^
+> 18 |           href="/"
+     …
+     | ^^^^^^^^^^^^^
+> 49 |         </article>
+     | ^^^^^^^^^^^^^
+> 50 |       </div>
+     | ^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  51 |     );
+  52 |   } catch {
+  53 |     notFound();                                                                                                                                                                                                                                                                                                                               react-hooks/error-boundaries
+  17:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:17:9
+  15 |     return (
+  16 |       <div className="mx-auto max-w-4xl px-6 py-16">
+> 17 |         <Link
+     |         ^^^^^
+> 18 |           href="/"
+     | ^^^^^^^^^^^^^^^^^^
+> 19 |           className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-black hover:underline"
+     | ^^^^^^^^^^^^^^^^^^
+> 20 |         >
+     | ^^^^^^^^^^^^^^^^^^
+> 21 |           ← Zpět na hlavní stránku
+     | ^^^^^^^^^^^^^^^^^^
+> 22 |         </Link>
+     | ^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  23 |         <article className="space-y-6">
+  24 |           <header>
+  25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">                                                                                                                                                      react-hooks/error-boundaries
+  23:9   error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:23:9
+  21 |           ← Zpět na hlavní stránku
+  22 |         </Link>
+> 23 |         <article className="space-y-6">
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 24 |           <header>
+     | ^^^^^^^^^^^^^^^^^^
+> 25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     …
+     | ^^^^^^^^^^^^^^^^^^
+> 48 |           )}
+     | ^^^^^^^^^^^^^^^^^^
+> 49 |         </article>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  50 |       </div>
+  51 |     );
+  52 |   } catch {                                                                                                                                                                                                                                                                                                           react-hooks/error-boundaries
+  24:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:24:11
+  22 |         </Link>
+  23 |         <article className="space-y-6">
+> 24 |           <header>
+     |           ^^^^^^^^
+> 25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |           </header>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  29 |           <div className="prose prose-lg max-w-none">
+  30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+  31 |           </div>                                                              react-hooks/error-boundaries
+  25:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:25:13
+  23 |         <article className="space-y-6">
+  24 |           <header>
+> 25 |             <h1 className="text-4xl font-semibold text-[#1e1b16]">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 26 |               {page.title}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |             </h1>
+     | ^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  28 |           </header>
+  29 |           <div className="prose prose-lg max-w-none">
+  30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />                                                                                                                                                                                                                                                           react-hooks/error-boundaries
+  29:11  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:29:11
+  27 |             </h1>
+  28 |           </header>
+> 29 |           <div className="prose prose-lg max-w-none">
+     |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |           </div>
+     | ^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  32 |           {page.data.downloads && (
+  33 |             <div className="space-y-4">
+  34 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>                                                                                                                                                                                                 react-hooks/error-boundaries
+  30:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:30:13
+  28 |           </header>
+  29 |           <div className="prose prose-lg max-w-none">
+> 30 |             <div dangerouslySetInnerHTML={{ __html: md.render(page.content) }} />
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  31 |           </div>
+  32 |           {page.data.downloads && (
+  33 |             <div className="space-y-4">                                                                                                                                                                                                                                                                                                                                                                                                    react-hooks/error-boundaries
+  33:13  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:33:13
+  31 |           </div>
+  32 |           {page.data.downloads && (
+> 33 |             <div className="space-y-4">
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 34 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 35 |               <ul className="space-y-2">
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 46 |               </ul>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 47 |             </div>
+     | ^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  48 |           )}
+  49 |         </article>
+  50 |       </div>                                                                      react-hooks/error-boundaries
+  34:15  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:34:15
+  32 |           {page.data.downloads && (
+  33 |             <div className="space-y-4">
+> 34 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  35 |               <ul className="space-y-2">
+  36 |                 {page.data.downloads.map((download: any, index: number) => (
+  37 |                   <li key={index}>                                                                                                                                                                                                                                                                                                                                                react-hooks/error-boundaries
+  35:15  error  Error: Avoid constructing JSX within try/catch
+
+React does not immediately render components when JSX is rendered, so any errors from this component will not be caught by the try/catch. To catch errors in rendering a given component, wrap that component in an error boundary. (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary).
+
+/opt/data/projects/webdev/zs-hermanice/src/app/uredni-deska/[...slug]/page.tsx:35:15
+  33 |             <div className="space-y-4">
+  34 |               <h2 className="text-2xl font-semibold">Soubory ke stažení</h2>
+> 35 |               <ul className="space-y-2">
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 36 |                 {page.data.downloads.map((download: any, index: number) => (
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 37 |                   <li key={index}>
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 45 |                 ))}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 46 |               </ul>
+     | ^^^^^^^^^^^^^^^^^^^^ Avoid constructing JSX within try/catch
+  47 |             </div>
+  48 |           )}
+  49 |         </article>  react-hooks/error-boundaries
+  36:53  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+
+/opt/data/projects/webdev/zs-hermanice/src/app/vyhledavani/page.tsx
+  29:33  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  29:37  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  32:44  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  32:48  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/opt/data/projects/webdev/zs-hermanice/src/components/HomePage.tsx
+  220:21  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  220:41  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/opt/data/projects/webdev/zs-hermanice/src/components/SeoJsonLd.tsx
+  4:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/opt/data/projects/webdev/zs-hermanice/src/lib/content.ts
+  69:101  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/opt/data/projects/webdev/zs-hermanice/src/lib/search.test.ts
+  31:11  warning  'mockPages' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  31:22  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  33:22  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  34:20  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  51:22  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  52:20  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  68:22  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+  69:20  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+
+✖ 66 problems (63 errors, 3 warnings)
