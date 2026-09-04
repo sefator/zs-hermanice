@@ -7,6 +7,8 @@ vi.mock("./content");
 import fs from "node:fs/promises";
 import { getNewsItems } from "./content";
 
+type MockFn = (...args: unknown[]) => unknown;
+
 describe("searchContent", () => {
   beforeEach(() => {
     clearCache();
@@ -28,10 +30,9 @@ describe("searchContent", () => {
         date: "2023-01-01",
       },
     ];
-    const mockPages: any[] = [];
 
-    (getNewsItems as any).mockResolvedValue(mockNews);
-    (fs.readdir as any).mockResolvedValue([]);
+    (getNewsItems as MockFn).mockResolvedValue(mockNews);
+    (fs.readdir as MockFn).mockResolvedValue([]);
 
     const results = await searchContent("test");
     expect(results.length).toBe(1);
@@ -48,8 +49,8 @@ describe("searchContent", () => {
         date: "2023-01-01",
       },
     ];
-    (getNewsItems as any).mockResolvedValue(mockNews);
-    (fs.readdir as any).mockResolvedValue([]);
+    (getNewsItems as MockFn).mockResolvedValue(mockNews);
+    (fs.readdir as MockFn).mockResolvedValue([]);
 
     const results = await searchContent("news");
     expect(results[0].url).toBe("/aktuality/news-slug");
@@ -65,8 +66,8 @@ describe("searchContent", () => {
         date: "2023-01-01",
       },
     ];
-    (getNewsItems as any).mockResolvedValue(mockNews);
-    (fs.readdir as any).mockResolvedValue([]);
+    (getNewsItems as MockFn).mockResolvedValue(mockNews);
+    (fs.readdir as MockFn).mockResolvedValue([]);
 
     const results = await searchContent("test");
     expect(results[0].snippet).toContain("test");

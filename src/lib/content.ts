@@ -66,7 +66,7 @@ export async function getGalleries(): Promise<GalleryItem[]> {
   return sorted;
 }
 
-export async function getPageContent(slug: string): Promise<{ title: string; content: string; data: any }> {
+export async function getPageContent(slug: string): Promise<{ title: string; content: string; data: Record<string, unknown> }> {
   const pagesDir = path.join(contentDir, "pages");
   const file = path.join(pagesDir, `${slug}.md`);
   try {
