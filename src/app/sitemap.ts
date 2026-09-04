@@ -45,7 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       const page = await getPageContent(`school/${slug}`);
       sitemap.push({
         url: `${SITE_URL}/skola/${slug}`,
-        lastModified: page.data.lastmod ? new Date(page.data.lastmod) : new Date(),
+        lastModified: page.data.lastmod ? new Date(String(page.data.lastmod)) : new Date(),
         changeFrequency: "monthly",
         priority: 0.7,
       });

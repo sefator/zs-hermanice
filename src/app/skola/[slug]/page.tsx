@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     const page = await getPageContent(`school/${slug}`);
     return createMetadata({
       title: `${page.title} - Škola`,
-      description: page.data.summary || page.data.description || "Informace o škole ZŠ Heřmanice.",
+      description: String(page.data.summary || page.data.description || "Informace o škole ZŠ Heřmanice."),
       canonical: `/skola/${slug}`,
     });
   } catch {
